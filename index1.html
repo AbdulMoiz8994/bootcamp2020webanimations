@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We are Doing WAAPI</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Animated Example</h1>
+    <div class="card">
+<div class="box">
+
+</div>
+<div class="block">
+
+</div>
+    </div>
+<div>
+    <button class="button play">Play</button>
+    <button class="button pause">Pause</button>
+    <button class="button reverse">Reverse</button>
+</div>
+    <script>
+const animations=document.querySelector(".box").animate([
+    // {transform: 'rotate(0deg)'},
+    // {transform: 'rotate(200deg)',backgroundColor: 'red'},
+    // {transform: 'translateY(0px)'},
+    // {transform: 'translateY(200px)',backgroundColor: 'red'},
+    // {transform: 'translateX(90vw)'},
+    // {transform: 'translateX(0vw)',backgroundColor: 'red'},
+    // {transform: 'scale(0)'},
+    // {transform: 'scale(2.0)'}
+    
+        {transform: 'rotate(0deg)'},
+        {transform: 'rotate(360deg)'},
+],
+{
+    duration: 3000,
+    iterations: Infinity,
+    // direction: "alternate",
+    // easing: "ease-in-out"
+}
+)
+const property=[
+    // {transform: 'rotate(0deg)'},
+    // {transform: 'rotate(200deg)',backgroundColor: 'red'},
+    // {transform: 'translateY(0px)'},
+    // {transform: 'translateY(200px)',backgroundColor: 'red'},
+    // {transform: 'translateX(90vw)'},
+    // {transform: 'translateX(0vw)',backgroundColor: 'red'},
+    // {transform: 'scale(0)'},
+    // {transform: 'scale(2.0)'}
+    
+        {transform: 'rotate(0deg)'},
+        {transform: 'rotate(360deg)'},
+]
+const animation={
+    duration: 3000,
+    iterations: 2,
+    direction: "alternate",
+    easing: "ease-in-out"
+}
+const blocks=document.querySelector(".block").animate(
+      property,
+      animation
+)
+document.querySelector(".play").addEventListener('click' ,() => blocks.play())      
+  document.querySelector(".pause").addEventListener('click' ,() => blocks.pause())      
+  document.querySelector(".reverse").addEventListener('click' ,() => blocks.reverse())      
+
+
+  document.querySelector(".play").addEventListener('click' ,() => animations.play())      
+  document.querySelector(".pause").addEventListener('click' ,() => animations.pause())      
+  document.querySelector(".reverse").addEventListener('click' ,() => animations.reverse())      
+
+    </script>
+</body>
+</html>
